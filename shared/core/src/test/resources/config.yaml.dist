@@ -1,0 +1,14 @@
+kafka:
+    bootstrap.servers: localhost:9092
+    application.id: com.organization.name
+    security.protocol: SASL_PLAINTEXT
+    compression.type: gzip
+    sasl.mechanism: PLAIN
+    sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="user" password="pass";
+    auto.offset.reset: earliest
+topics:
+    input: inputTopic
+    output: outputTopic
+options:
+    key1: value1
+    keyToBeOverwritten: wrongValue
